@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0034)http://www.dota2.com/patches/7.22b -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" href="http://www.dota2.com/favicon.ico">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+	<link href="./Обновление 7.22b_files/global.css" rel="stylesheet" type="text/css">
+<link href="./Обновление 7.22b_files/global_english.css" rel="stylesheet" type="text/css">
+<link href="./Обновление 7.22b_files/publicheader.css" rel="stylesheet" type="text/css">
+<link href="./Обновление 7.22b_files/patch_notes.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" async="" src="./Обновление 7.22b_files/ga.js"></script><script type="text/javascript" src="./Обновление 7.22b_files/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">$J = jQuery;</script><script type="text/javascript" src="./Обновление 7.22b_files/shared_global.js"></script>
+	<title>Обновление 7.22b</title>
+			
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-33822635-2']);
+		_gaq.push(['_setSampleRate', '1']);		_gaq.push(['_setDomainName', 'dota2.com']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+	<script language="javascript">
+		function ViewPatchNotes( patchNumber )
+		{
+			document.location = "http://www.dota2.com/patches/" + patchNumber;
+		}
+	</script>
+</head>
+<body>
+	<!-- header bar -->
+	
+
+
+	
+<script language="javascript">
+
+	function MM_preloadImages() { //v3.0
+	  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+		var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+		if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	}
+
+	function PreloadHeaderImages()
+	{
+		//  Preload header rollover images
+		//MM_preloadImages(
+		//);
+	}
+
+			if ( document.addEventListener ) {
+		document.addEventListener( "DOMContentLoaded", PreloadHeaderImages, false );
+	} else if ( document.attachEvent ) {
+		document.attachEvent( 'onDomContentLoaded', PreloadHeaderImages );
+	}
+
+</script>
+
+
+
+	<script language="javascript">
+		function closeSubMenu( target ) {
+			$(target).find('.dn_arrow').attr( "src", "http://cdn.dota2.com/apps/dota2/images/nav/arrow.png" );
+			$(target).find('.menuSubItemList').hide();
+		}
+
+		function closeAllSubMenus() {
+			$('.navItem').each( function() {
+				closeSubMenu( $(this) );
+			});
+		}
+
+		function openSubMenu( target ) {
+			closeAllSubMenus();
+
+			$(target).find('.dn_arrow').attr( "src", "http://cdn.dota2.com/apps/dota2/images/nav/arrow_over.png" );
+
+			// Show the sub-menu
+			var subItemList = $(target).find('.menuSubItemList');
+			if ( subItemList.length ) {
+				var itemTop = $(target).position().top + $(target).outerHeight() - 16;
+				var itemLeft = $(target).position().left;
+				subItemList
+					.css({
+						"top": itemTop + 'px',
+						"left": itemLeft
+					})
+					.fadeIn( 'fast' );
+			}
+		}
+
+		$(document).ready( function () {
+			// Deal with the nav bars
+			$('.navItem').each( function() {
+				$(this).hover( function () {
+					$(this)
+						.find('a.navBarItem img.top')
+						.animate({
+							"opacity": 1
+						}, 100 );
+					if ( $(this).find('.menuSubItemList').length !== 0 ) {
+						openSubMenu( this );
+					}
+				},
+				function () {
+					$(this)
+					.find('a.navBarItem img.top')
+					.animate({
+						"opacity": 0
+					}, 100 );
+					if ( $(this).find('.menuSubItemList').length !== 0 ) {
+						closeSubMenu(this);
+					}
+				}
+				);
+			});
+
+			// Deal with header drop-downs
+			var strMenus = '#languageSelector';
+			
+			$(strMenus).each( function() {
+				$(this).hover( function () {
+					//show its submenu
+					$( this ).find( 'div' ).fadeIn( 'fast' );
+				},
+				function () {
+					//hide its submenu
+					$( this ).find( 'div' ).hide();
+				}
+				);
+			});
+		});
+
+	</script>
+
+	<!-- /header bar -->
+
+			
+		<div class="PatchHeader CenterContents">
+			
+				
+
+			
+			<p class="PatchSubtitle">Обновление</p>
+			<p class="PatchTitle">7.22b</p>
+
+		</div>
+
+		<div class="MainContents">
+
+			
+			
+							<div id="HeroesSection" class="PatchSection CenterContents">
+					<p class="SectionHeader">Изменения героев</p>
+
+					
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22b_files/clinkz_hphover.png">
+
+							<div class="HeroName">Clinkz</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая сила увеличена на 2</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22b_files/clinkz_searing_arrows_md.png">
+
+											<div class="AbilityName">Searing Arrows</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Урон уменьшен с 30/40/50/60 до 20/30/40/50</li><li class="PatchNote">Расход маны уменьшен с 12 до 6/8/10/12</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительный урон от Searing Arrows уменьшен с 20 до 15</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22b_files/dark_willow_hphover.png">
+
+							<div class="HeroName">Dark Willow</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая задержка перед атакой увеличена с 1,3 до 1,5 секунды</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22b_files/dark_willow_shadow_realm_md.png">
+
+											<div class="AbilityName">Shadow Realm</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Время до максимального урона увеличено с 3 до 4 секунд</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 25 уровня: дополнительная скорость атаки уменьшена с 200 до 175</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22b_files/grimstroke_hphover.png">
+
+							<div class="HeroName">Grimstroke</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Dark Portrait: урон по иллюзии увеличен с 200% до 350%</li><li class="PatchNote">Dark Portrait: время жизни иллюзии уменьшено с 20 до 15 секунд</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22b_files/lycan_hphover.png">
+
+							<div class="HeroName">Lycan</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Золото и опыт за волков от Aghanim's Scepter уменьшены вдвое</li><li class="PatchNote">Теперь волки от Aghanim's Scepter получают шанс совершить критическую атаку от способности Shapeshift</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22b_files/necrolyte_hphover.png">
+
+							<div class="HeroName">Necrophos</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22b_files/necrolyte_heartstopper_aura_md.png">
+
+											<div class="AbilityName">Heartstopper Aura</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Тип урона изменён с чистого на магический (по-прежнему не считается нанесением урона)</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22b_files/slark_hphover.png">
+
+							<div class="HeroName">Slark</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22b_files/slark_essence_shift_md.png">
+
+											<div class="AbilityName">Essence Shift</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Длительность на 4 уровне уменьшена со 120 до 100 секунд</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+					
+				</div>
+			
+		</div>
+
+	
+
+
+</body></html>

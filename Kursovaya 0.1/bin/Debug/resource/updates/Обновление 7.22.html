@@ -1,0 +1,2415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0033)http://www.dota2.com/patches/7.22 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" href="http://www.dota2.com/favicon.ico">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+	<link href="./Обновление 7.22_files/global.css" rel="stylesheet" type="text/css">
+<link href="./Обновление 7.22_files/global_english.css" rel="stylesheet" type="text/css">
+<link href="./Обновление 7.22_files/publicheader.css" rel="stylesheet" type="text/css">
+<link href="./Обновление 7.22_files/patch_notes.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" async="" src="./Обновление 7.22_files/ga.js"></script><script type="text/javascript" src="./Обновление 7.22_files/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">$J = jQuery;</script><script type="text/javascript" src="./Обновление 7.22_files/shared_global.js"></script>
+	<title>Обновление 7.22</title>
+			
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-33822635-2']);
+		_gaq.push(['_setSampleRate', '1']);		_gaq.push(['_setDomainName', 'dota2.com']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+	<script language="javascript">
+		function ViewPatchNotes( patchNumber )
+		{
+			document.location = "http://www.dota2.com/patches/" + patchNumber;
+		}
+	</script>
+</head>
+<body>
+	<!-- header bar -->
+	
+
+
+	
+<script language="javascript">
+
+	function MM_preloadImages() { //v3.0
+	  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+		var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+		if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	}
+
+	function PreloadHeaderImages()
+	{
+		//  Preload header rollover images
+		//MM_preloadImages(
+		//);
+	}
+
+			if ( document.addEventListener ) {
+		document.addEventListener( "DOMContentLoaded", PreloadHeaderImages, false );
+	} else if ( document.attachEvent ) {
+		document.attachEvent( 'onDomContentLoaded', PreloadHeaderImages );
+	}
+
+</script>
+
+
+
+	<script language="javascript">
+		function closeSubMenu( target ) {
+			$(target).find('.dn_arrow').attr( "src", "http://cdn.dota2.com/apps/dota2/images/nav/arrow.png" );
+			$(target).find('.menuSubItemList').hide();
+		}
+
+		function closeAllSubMenus() {
+			$('.navItem').each( function() {
+				closeSubMenu( $(this) );
+			});
+		}
+
+		function openSubMenu( target ) {
+			closeAllSubMenus();
+
+			$(target).find('.dn_arrow').attr( "src", "http://cdn.dota2.com/apps/dota2/images/nav/arrow_over.png" );
+
+			// Show the sub-menu
+			var subItemList = $(target).find('.menuSubItemList');
+			if ( subItemList.length ) {
+				var itemTop = $(target).position().top + $(target).outerHeight() - 16;
+				var itemLeft = $(target).position().left;
+				subItemList
+					.css({
+						"top": itemTop + 'px',
+						"left": itemLeft
+					})
+					.fadeIn( 'fast' );
+			}
+		}
+
+		$(document).ready( function () {
+			// Deal with the nav bars
+			$('.navItem').each( function() {
+				$(this).hover( function () {
+					$(this)
+						.find('a.navBarItem img.top')
+						.animate({
+							"opacity": 1
+						}, 100 );
+					if ( $(this).find('.menuSubItemList').length !== 0 ) {
+						openSubMenu( this );
+					}
+				},
+				function () {
+					$(this)
+					.find('a.navBarItem img.top')
+					.animate({
+						"opacity": 0
+					}, 100 );
+					if ( $(this).find('.menuSubItemList').length !== 0 ) {
+						closeSubMenu(this);
+					}
+				}
+				);
+			});
+
+			// Deal with header drop-downs
+			var strMenus = '#languageSelector';
+			
+			$(strMenus).each( function() {
+				$(this).hover( function () {
+					//show its submenu
+					$( this ).find( 'div' ).fadeIn( 'fast' );
+				},
+				function () {
+					//hide its submenu
+					$( this ).find( 'div' ).hide();
+				}
+				);
+			});
+		});
+
+	</script>
+
+	<!-- /header bar -->
+
+			
+		<div class="PatchHeader CenterContents">
+			
+				
+
+			
+			<p class="PatchSubtitle">Обновление</p>
+			<p class="PatchTitle">7.22</p>
+
+		</div>
+
+		<div class="MainContents">
+
+							<div id="GeneralSection" class="PatchSection CenterContents">
+					<p class="SectionHeader">Общие изменения</p>
+					<ul class="PatchNotesList">
+						<li class="PatchNote">Добавлены улучшения от Aghanim's Scepter для всех 24 героев, у которых их не было</li><li class="PatchNote">Обновлена часть существующих улучшений от Aghanim's Scepter</li><li class="PatchNote">Теперь, купив рецепт за 2000 золота, Aghanim's Scepter можно поглотить, чтобы получить все его улучшения, кроме бонусов к характеристикам.</li><li class="PatchNote">Теперь за убийство Рошана даётся расходник, наделяющий героя эффектом Aghanim's Scepter. За третьего Рошана даётся либо этот расходник, либо Refresher Shard, за четвёртого — оба этих предмета. Чтобы узнать, какие предметы даются за убийство Рошана, выберите его и посмотрите в его инвентарь.</li><li class="PatchNote">Добавлен новый визуальный эффект под героями, у которых есть улучшение от Aghanim's Scepter</li><div class="PatchNote"><br></div><li class="PatchNote">Mars добавлен в режим Captains Mode</li><li class="PatchNote">Io добавлен в режим Captains Mode</li><div class="PatchNote"><br></div><li class="PatchNote">Опыт врагу за добитого союзного крипа увеличен с 35% до 40%</li><li class="PatchNote">Потери золота за смерть изменены с 50 + Ценность/40 на Ценность/40</li><div class="PatchNote"><br></div><li class="PatchNote">Дополнительный опыт за прерванную серию убийств увеличен с 200-&gt;1250 до 400-&gt;1800</li><li class="PatchNote">Опыт для получения 5/6 уровня уменьшен с 600/620 до 580/600</li><li class="PatchNote">Опыт для получения всех уровней, начиная с 19, увеличен на 100</li><li class="PatchNote">Теперь опыт за убийство крипа-мага увеличивается на 8 с каждым улучшением его характеристик (каждые 7,5 минуты)</li><div class="PatchNote"><br></div><li class="PatchNote">Базовая задержка перед атакой у катапульты увеличена с 2,7 до 3 секунд</li><li class="PatchNote">Теперь две катапульты появляются после отметки в 35:00, а не в 30:00</li><li class="PatchNote">На катапульты больше не действуют способности, дающие контроль над крипом</li><div class="PatchNote"><br></div><li class="PatchNote">Урон третьих и четвёртых башен увеличен со 152 до 175</li><li class="PatchNote">Броня от ауры первых башен увеличена с 2 до 3</li><li class="PatchNote">Броня от ауры вторых, третьих и четвёртых башен увеличена с 4 до 5</li><li class="PatchNote">Теперь вторые, третьи и четвёртые башни под действием укрепления атакуют ещё две дополнительные цели, начиная с ближайших.</li><div class="PatchNote"><br></div><li class="PatchNote">Немного сдвинут тяжёлый лагерь нейтралов у лёгкой линии сил Света, и изменён ландшафт рядом с ним</li><li class="PatchNote">Уменьшено время преследования у нейтралов из тяжёлого лагеря возле лёгкой линии сил Света</li><li class="PatchNote">Вторая центральная башня сил Света передвинута влево (больше не даёт обзор на тяжёлый лагерь нейтралов справа)</li><li class="PatchNote">Сдвинуты деревья справа от второй центральной башни сил Света</li><li class="PatchNote">Теперь средний лагерь нейтралов рядом с центральной линией сил Света окружён двумя слоями деревьев</li><li class="PatchNote">Изменены зоны возрождения нейтралов на стороне сил Тьмы</li><div class="PatchNote"><br></div><li class="PatchNote">Теперь иллюзии могут использовать вампиризм</li><li class="PatchNote">Теперь вампиризм действует на атаки по вражеским иллюзиям (подсчитывается до изменений урона, связанных с иллюзиями)</li><div class="PatchNote"><br></div><li class="PatchNote">Эффекты следующих предметов больше не передаются даже частично: Ring of Regen, Ring of Tarrasque, Sage's Mask, Ring of Health, Void Stone и Perseverance</li><div class="PatchNote"><br></div><li class="PatchNote">Рошан: базовая броня увеличена на 2</li><li class="PatchNote">Рошан: прирост атаки в минуту увеличен с 4 до 6</li><li class="PatchNote">Рошан: диапазон золота за добивание изменён со 150–400 на 225–325 (среднее значение осталось прежним)</li><li class="PatchNote">Рошан: опыт за убийство уменьшен с 750 до 400</li><div class="PatchNote"><br></div><li class="PatchNote">Сатир-мучитель: восстановление здоровья от ауры уменьшено с 5,5 до 5</li><li class="PatchNote">Время, в которое убийство силами Света/Тьмы засчитывается игроку, увеличено с 20 до 30 секунд</li><div class="PatchNote"><br></div><li class="PatchNote">Теперь у героев может быть нестандартная базовая скорость атаки (раньше она у всех была равна 100)</li><div class="PatchNote">* Abaddon: базовая скорость атаки увеличена со 100 до 115</div><div class="PatchNote">* Broodmother: базовая скорость атаки увеличена со 100 до 125</div><div class="PatchNote">* Crystal Maiden: базовая скорость атаки увеличена со 100 до 115</div><div class="PatchNote">* Gyrocopter: базовая скорость атаки увеличена со 100 до 125</div><div class="PatchNote">* Mirana: базовая скорость атаки увеличена со 100 до 115</div><div class="PatchNote">* Silencer: базовая скорость атаки увеличена со 100 до 115</div><div class="PatchNote">* Slark: базовая скорость атаки увеличена со 100 до 120</div><div class="PatchNote">* Venomancer: базовая скорость атаки увеличена со 100 до 115</div><div class="PatchNote">* Weaver: базовая скорость атаки увеличена со 100 до 120</div><div class="PatchNote"><br></div><li class="PatchNote">Теперь у героев может быть нестандартное базовое восстановление маны</li><div class="PatchNote">* Clinkz: теперь имеет базовое восстановление маны в 0,25</div><div class="PatchNote">* Lich: теперь имеет базовое восстановление маны в 0,75</div><div class="PatchNote">* Pugna: теперь имеет базовое восстановление маны в 0,5</div><div class="PatchNote">* Shadow Fiend: теперь имеет базовое восстановление маны в 0,3</div><div class="PatchNote">* Techies: теперь имеет базовое восстановление маны в 1</div><div class="PatchNote">* Tinker: теперь имеет базовое восстановление маны в 0,25</div><div class="PatchNote">* Treant Protector: теперь имеет базовое восстановление маны в 0,5</div><div class="PatchNote">* Weaver: теперь имеет базовое восстановление маны в 0,4</div><div class="PatchNote">* Zeus: теперь имеет базовое восстановление маны в 0,25</div>					</ul>
+				</div>
+			
+							<div id="ItemsSection" class="PatchSection CenterContents">
+					<p class="SectionHeader">Изменения предметов</p>
+
+					
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/bloodstone_lg.png">
+							
+							<div class="ItemName">Bloodstone</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Множители восстановления маны от этого предмета больше не складываются</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/ancient_janggo_lg.png">
+							
+							<div class="ItemName">Drum of Endurance</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Восстановление маны уменьшено с 1,5 до 1,25</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/skadi_lg.png">
+							
+							<div class="ItemName">Eye of Skadi</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Длительность замедления изменена с 5/2,5 секунды для владельцев ближнего/дальнего боя на постоянные 3 секунды</li><li class="PatchNote">Замедление существ ближнего боя уменьшено с 35% до 20%</li><li class="PatchNote">Замедление существ дальнего боя увеличено с 35% до 45%</li><li class="PatchNote">Теперь замедление атаки соответствует замедлению передвижения, указанному выше</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/guardian_greaves_lg.png">
+							
+							<div class="ItemName">Guardian Greaves</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Восстановление здоровья от ауры уменьшено с 4,5 до 3,5</li><li class="PatchNote">Броня от усиленной ауры уменьшена с 15 до 10</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/helm_of_the_dominator_lg.png">
+							
+							<div class="ItemName">Helm of the Dominator</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Теперь для сборки требуется рецепт стоимостью 300</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/mask_of_madness_lg.png">
+							
+							<div class="ItemName">Mask of Madness</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Berserk: дополнительная скорость передвижения увеличена с 25 до 30</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/mekansm_lg.png">
+							
+							<div class="ItemName">Mekansm</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Восстановление здоровья от ауры уменьшено с 4,5 до 3,5</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/ward_observer_lg.png">
+							
+							<div class="ItemName">Observer Ward</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Стоимость уменьшена с 75 до 50</li><li class="PatchNote">Золото за уничтожение увеличено со 100 + 2/мин. до 100 + 4/мин.</li><li class="PatchNote">Опыт за уничтожение увеличен с 50 + 4/мин. до 50 + 6/мин.</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/pipe_lg.png">
+							
+							<div class="ItemName">Pipe of Insight</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Восстановление здоровья от ауры уменьшено с 3 до 2</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/rod_of_atos_lg.png">
+							
+							<div class="ItemName">Rod of Atos</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Дополнительные сила и ловкость уменьшены с 12 до 10</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/ward_sentry_lg.png">
+							
+							<div class="ItemName">Sentry Ward</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Стоимость уменьшена со 100 до 75</li><li class="PatchNote">Теперь количество в лавке ограничено (максимум 10, в начале игры 4, пополняется каждые 70 секунд)</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/spirit_vessel_lg.png">
+							
+							<div class="ItemName">Spirit Vessel</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Уменьшение лечения ослаблено с 70% до 60%</li><li class="PatchNote">Урон от текущего запаса здоровья уменьшен с 5% до 4%</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/tome_of_knowledge_lg.png">
+							
+							<div class="ItemName">Tome of Knowledge</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Теперь в 10:00 в лавке появляются два этих предмета.</li><li class="PatchNote">Теперь использование имеет перезарядку в 5 минут.</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/vladmir_lg.png">
+							
+							<div class="ItemName">Vladmir's Offering</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Восстановление маны уменьшено с 1,75 до 1,5</li>							</ul>
+						</div>
+											<div class="ItemNotes">
+							
+															<img class="ItemImage" src="./Обновление 7.22_files/wraith_band_lg.png">
+							
+							<div class="ItemName">Wraith Band</div>
+
+							<ul class="PatchNotesList">
+								<li class="PatchNote">Дополнительная скорость атаки уменьшена с 6 до 5</li>							</ul>
+						</div>
+					
+				</div>
+			
+							<div id="HeroesSection" class="PatchSection CenterContents">
+					<p class="SectionHeader">Изменения героев</p>
+
+					
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/abaddon_hphover.png">
+
+							<div class="HeroName">Abaddon</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая скорость атаки увеличена со 100 до 115</li><li class="PatchNote">Переработано улучшение от Aghanim's Scepter. Borrowed Time: во время действия автоматически применяет способность Mist Coil на союзников в радиусе 1600, когда они получают более 525 урона (скипетр по-прежнему увеличивает длительность на 1 секунду).</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/abaddon_death_coil_md.png">
+
+											<div class="AbilityName">Mist Coil</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Дальность применения уменьшена с 800 до 500</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительные урон/лечение от Mist Coil уменьшены с 75 до 60</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/alchemist_hphover.png">
+
+							<div class="HeroName">Alchemist</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Если у вас есть скипетр или его эссенция, вы получаете +30 к урону от атак и +6% к урону от способностей за каждый расплавленный для союзников Aghanim's Scepter.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/ancient_apparition_hphover.png">
+
+							<div class="HeroName">Ancient Apparition</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/ancient_apparition_ice_vortex_md.png">
+
+											<div class="AbilityName">Ice Vortex</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Расход маны уменьшен с 50/70/90/110 до 40/60/80/100</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/ancient_apparition_ice_blast_md.png">
+
+											<div class="AbilityName">Ice Blast</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Начальный снаряд этой способности больше не появляется на мини-карте противников из-за раскрытия невидимости</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/antimage_hphover.png">
+
+							<div class="HeroName">Anti-Mage</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Mana Void: увеличивает длительность оглушения на 1 секунду. Если от этой способности или во время оглушения от неё умрёт герой, к перезарядке его способности с самой долгой перезарядкой добавятся 70 секунд. Эффект срабатывает при возрождении жертвы.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/arc_warden_hphover.png">
+
+							<div class="HeroName">Arc Warden</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Скорость поворота увеличена с 0,6 до 0,7</li><li class="PatchNote">Теперь копия от способности Tempest Double может активировать руны</li><li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Дарует новую способность: Rune Forge. Создаёт перед героем случайную руну. Перезаряжается 60 секунд. Может создать как руну богатства, так и руну усиления.</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 10 уровня: дополнительная скорость атаки увеличена с 30 до 35</li><li class="PatchNote">Талант 20 уровня: уменьшение перезарядки Spark Wraith усилено с 1,5 до 2 секунд</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/axe_hphover.png">
+
+							<div class="HeroName">Axe</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовый урон увеличен на 3</li><li class="PatchNote">Базовая броня увеличена на 1</li><li class="PatchNote">Переработано улучшение от Aghanim's Scepter. Battle Hunger: способность применяется на область радиусом 400 (по-прежнему уменьшает урон врагов на 30%)</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/axe_battle_hunger_md.png">
+
+											<div class="AbilityName">Battle Hunger</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">При применении на крипов даёт половину бонуса к скорости</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/bane_hphover.png">
+
+							<div class="HeroName">Bane</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/bane_brain_sap_md.png">
+
+											<div class="AbilityName">Brain Sap</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь Aghanim's Scepter также уменьшает задержку перед применением на 50%</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 20 уровня: дополнительное замедление атаки от Enfeeble увеличено со 100 до 125</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/batrider_hphover.png">
+
+							<div class="HeroName">Batrider</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/batrider_firefly_md.png">
+
+											<div class="AbilityName">Firefly</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Перезарядка изменена с 34 на 40/38/36/34 секунды</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/batrider_flaming_lasso_md.png">
+
+											<div class="AbilityName">Flaming Lasso</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Радиус поиска второй цели с Aghanim's Scepter увеличен с 400 до 450</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/beastmaster_hphover.png">
+
+							<div class="HeroName">Beastmaster</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Переработано улучшение от Aghanim's Scepter. Wild Axes: убирает перезарядку. Способность можно использовать, когда топоры вернутся к герою.</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: «+65 к урону от Wild Axes» заменено на «+40 к урону кабана»</li><li class="PatchNote">Талант 20 уровня: «+50 к урону кабана» заменено на «+75 к урону от Wild Axes»</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/bloodseeker_hphover.png">
+
+							<div class="HeroName">Bloodseeker</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост ловкости уменьшен с 3,5 до 3,1</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/bloodseeker_blood_bath_md.png">
+
+											<div class="AbilityName">Blood Rite</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Расход маны уменьшен со 100 до 70/80/90/100</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/bloodseeker_rupture_md.png">
+
+											<div class="AbilityName">Rupture</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Способность снова может убить. Наносит урон в размере 30/45/60% от преодолённого расстояния.</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/bounty_hunter_hphover.png">
+
+							<div class="HeroName">Bounty Hunter</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/bounty_hunter_jinada_md.png">
+
+											<div class="AbilityName">Jinada</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Урон уменьшен с 80/110/140/170 до 70/100/130/160</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/bounty_hunter_shuriken_toss_md.png">
+
+											<div class="AbilityName">Shuriken Toss</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь Aghanim's Scepter также увеличивает дальность применения с 400 до 800</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 20 уровня: дополнительный урон от Shuriken Toss увеличен с 75 до 125</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/brewmaster_hphover.png">
+
+							<div class="HeroName">Brewmaster</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Thunder Clap: урон уменьшен со 100/175/250/300 до 90/160/230/300</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/brewmaster_primal_split_md.png">
+
+											<div class="AbilityName">Primal Split</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь Aghanim's Scepter также дарует воинам-элементалям +100 к скорости передвижения</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/bristleback_hphover.png">
+
+							<div class="HeroName">Bristleback</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая броня увеличена на 1</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/bristleback_warpath_md.png">
+
+											<div class="AbilityName">Warpath</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Бонус к урону за эффект увеличен с 18/24/30 до 22/28/34</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/bristleback_viscous_nasal_goo_md.png">
+
+											<div class="AbilityName">Viscous Nasal Goo</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Радиус с Aghanim's Scepter увеличен с 750 до 825</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/broodmother_hphover.png">
+
+							<div class="HeroName">Broodmother</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая скорость атаки увеличена со 100 до 125</li><li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Spin Web: увеличивает максимум паутин с 8 до 20, увеличивает дополнительную скорость передвижения с 70% до 100% и позволяет превысить максимум скорости.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/centaur_hphover.png">
+
+							<div class="HeroName">Centaur Warrunner</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая броня увеличена на 1</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 20 уровня: дополнительный урон от Retaliate увеличен с 70 до 80</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/chaos_knight_hphover.png">
+
+							<div class="HeroName">Chaos Knight</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост силы уменьшен с 3,7 до 3,4</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/chaos_knight_chaos_bolt_md.png">
+
+											<div class="AbilityName">Chaos Bolt</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Минимальный урон увеличен с 60/90/120/150 до 90/110/130/150</li><li class="PatchNote">Максимальный урон увеличен со 180/210/240/270 до 180/220/260/300</li><li class="PatchNote">Минимальная длительность оглушения изменена с 1/1/1/2 на 1,25/1,5/1,75/2 секунды</li><li class="PatchNote">Максимальная длительность оглушения увеличена с 2/3/4/4 до 2,2/2,8/3,4/4 секунд</li><li class="PatchNote">Перезарядка увеличена с 10 до 13/12/11/10 секунд</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/chaos_knight_phantasm_md.png">
+
+											<div class="AbilityName">Phantasm</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь Aghanim's Scepter также уменьшает урон по иллюзиям с 260% до 180%</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/chen_hphover.png">
+
+							<div class="HeroName">Chen</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/chen_holy_persuasion_md.png">
+
+											<div class="AbilityName">Holy Persuasion</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь способность ускоряет передвижение крипов на 10/15/20/25</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/chen_divine_favor_md.png">
+
+											<div class="AbilityName">Divine Favor</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь это пассивная аура. Даёт +1/2/3/4 к восстановлению здоровья, +8/12/16/20% к усилению лечения и +4/8/12/16 к урону героям (бонус к урону вдвое больше для ваших подконтрольных крипов)</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня изменён с «-7 сек. перезарядки Divine Favor» на «+10 к урону от Divine Favor»</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/clinkz_hphover.png">
+
+							<div class="HeroName">Clinkz</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь имеет базовое восстановление маны в 0,25</li><li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Skeleton Walk: при выходе из невидимости создаёт рядом с героем двух скелетов от способности Burning Army. Увеличивает дополнительную скорость передвижения на 30% и позволяет превысить максимум скорости.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/clinkz_burning_army_md.png">
+
+											<div class="AbilityName">Burning Army</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Базовый интервал атак изменён с 1,75/1,6/1,45 на 1,6 секунды</li><li class="PatchNote">Урон скелетов изменён со 100% от базового урона героя на 80/100/120%</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительный урон от Searing Arrows уменьшен с 30 до 20</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/rattletrap_hphover.png">
+
+							<div class="HeroName">Clockwerk</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая броня увеличена на 1</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/crystal_maiden_hphover.png">
+
+							<div class="HeroName">Crystal Maiden</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Задержка перед атакой уменьшена с 0,55 до 0,45 секунды</li><li class="PatchNote">Базовая скорость атаки увеличена со 100 до 115</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/dark_seer_hphover.png">
+
+							<div class="HeroName">Dark Seer</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Сила уменьшена с 24 до 21</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 20 уровня: «Surge применяется по области радиусом 400» заменено на «+100 к урону от Ion Shell»</li><li class="PatchNote">Талант 20 уровня: «-15% перезарядки способностей и предметов» заменено на «+10 к броне»</li><li class="PatchNote">Талант 25 уровня: «+150 к урону от Ion Shell» заменено на «Surge применяется по области радиусом 400»</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/dark_willow_hphover.png">
+
+							<div class="HeroName">Dark Willow</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Shadow Realm: нанесение удара не прерывает действие способности, и до её окончания каждая атака будет наносить дополнительный урон, зависящий от времени пребывания в мире теней.</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительное золото в минуту увеличено с 90 до 120</li><li class="PatchNote">Талант 20 уровня: «+300 к максимальному урону от Shadow Realm» заменено на «-12 сек. перезарядки Bramble Maze»</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/dazzle_hphover.png">
+
+							<div class="HeroName">Dazzle</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/dazzle_shallow_grave_md.png">
+
+											<div class="AbilityName">Shallow Grave</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Радиус с Aghanim's Scepter увеличен с 450 до 500</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/death_prophet_hphover.png">
+
+							<div class="HeroName">Death Prophet</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Каждый раз, когда герой атакует врагов или попадает по ним способностями, к задетому противнику летит дух, который наносит двойной урон, замедляет жертву на 100% на 0,3 секунды, а затем возвращается и восстанавливает здоровье владельца.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/death_prophet_carrion_swarm_md.png">
+
+											<div class="AbilityName">Crypt Swarm</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Задержка перед применением уменьшена с 0,5 до 0,4 секунды</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/disruptor_hphover.png">
+
+							<div class="HeroName">Disruptor</div>
+
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: уменьшение перезарядки Kinetic Field усилено с 3 до 4 секунд</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/doom_bringer_hphover.png">
+
+							<div class="HeroName">Doom</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/doom_bringer_devour_md.png">
+
+											<div class="AbilityName">Devour</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь способность нельзя применить на крипа выше 3/4/5/6 уровня</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 25 уровня: дополнительное прорубание увеличено со 130% до 175%</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/dragon_knight_hphover.png">
+
+							<div class="HeroName">Dragon Knight</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Elder Dragon Form: увеличивает уровень способности на 1 и добавляет четвёртый уровень с чёрным драконом. У его атак на 50% сильнее замедление и урон от яда и по области, он увеличивает дальность атаки до 600, а сопротивление магии — на 30%.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/drow_ranger_hphover.png">
+
+							<div class="HeroName">Drow Ranger</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/drow_ranger_marksmanship_md.png">
+
+											<div class="AbilityName">Marksmanship</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Способность больше не позволяет убивать древних крипов одной атакой (по-прежнему наносит им больше урона и игнорирует броню)</li><li class="PatchNote">Теперь способность игнорирует не всю броню, а только базовую</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/elder_titan_hphover.png">
+
+							<div class="HeroName">Elder Titan</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Переработано улучшение от Aghanim's Scepter. Echo Stomp: способность даёт невосприимчивость к магии на время применения и после него. Её длительность увеличивается на 2 секунды за каждого задетого героя.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/ember_spirit_hphover.png">
+
+							<div class="HeroName">Ember Spirit</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Fire Remnant: втрое увеличивает дальность применения, вдвое ускоряет передвижения копии и увеличивает максимум зарядов с 3 до 5. Способность Activate Fire Remnant больше не расходует ману.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/faceless_void_hphover.png">
+
+							<div class="HeroName">Faceless Void</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост силы увеличен с 2,1 до 2,4</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 10 уровня: дополнительная сила увеличена с 10 до 12</li><li class="PatchNote">Талант 15 уровня: уменьшение перезарядки Time Walk усилено с 1 до 1,5 секунды</li><li class="PatchNote">Талант 20 уровня: дополнительная скорость атаки увеличена с 40 до 45</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/grimstroke_hphover.png">
+
+							<div class="HeroName">Grimstroke</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Дарует новую способность: Dark Portrait. Создаёт чернильную иллюзию вражеского героя, существующую 20 секунд и имеющую невосприимчивость к магии и увеличенную на 30% скорость передвижения. Иллюзия получает 200% урона и наносит 150% урона. Перезарядка: 35 секунд. Расход маны: 200.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/grimstroke_spirit_walk_md.png">
+
+											<div class="AbilityName">Ink Swell</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь способность можно применить на невосприимчивых к магии союзников.</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/gyrocopter_hphover.png">
+
+							<div class="HeroName">Gyrocopter</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая скорость атаки увеличена со 100 до 125</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/huskar_hphover.png">
+
+							<div class="HeroName">Huskar</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая броня увеличена на 1</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/huskar_berserkers_blood_md.png">
+
+											<div class="AbilityName">Berserker's Blood</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Максимальное восстановление от силы увеличено с 20/40/60/80% до 25/45/65/85%</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/huskar_inner_fire_md.png">
+
+											<div class="AbilityName">Inner Fire</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Перезарядка уменьшена с 18/16/14/12 до 14/13/12/11 секунд</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/invoker_hphover.png">
+
+							<div class="HeroName">Invoker</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовый урон увеличен на 3</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/invoker_exort_md.png">
+
+											<div class="AbilityName">Exort</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Урон за сферу уменьшен с 3/7/11/15/19/23/27 до 2/6/10/14/18/22/26</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 10 уровня: дополнительный урон от касания Chaos Meteor увеличен с 30 до 40</li><li class="PatchNote">Талант 20 уровня: дополнительные урон и скорость атаки от Alacrity увеличены с 35 до 45</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/wisp_hphover.png">
+
+							<div class="HeroName">Io</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Герой добавлен в режим Captains Mode</li><li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Духи от Spirits постоянно кружатся вокруг героя, появляясь каждую секунду. Духов не может быть больше пяти.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/wisp_tether_md.png">
+
+											<div class="AbilityName">Tether</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь притягивание к выбранному союзнику можно прервать оглушением (как Timber Chain)</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/jakiro_hphover.png">
+
+							<div class="HeroName">Jakiro</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/jakiro_liquid_fire_md.png">
+
+											<div class="AbilityName">Liquid Fire</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь эффект способности срабатывает по области, даже если цель погибла или уклонилась от атаки</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/keeper_of_the_light_hphover.png">
+
+							<div class="HeroName">Keeper of the Light</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь Aghanim's Scepter убирает необходимость стоять на месте во время прочтения Illuminate (по-прежнему позволяет излечивать союзников)</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/keeper_of_the_light_chakra_magic_md.png">
+
+											<div class="AbilityName">Chakra Magic</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь способность можно применять на врагов, отчего они теряют 4/4,5/5/5,5% от текущей маны за 100 преодолённых единиц (прежде терялась доля не от текущего, а от максимального запаса маны)</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/legion_commander_hphover.png">
+
+							<div class="HeroName">Legion Commander</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая броня увеличена на 1</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/lich_hphover.png">
+
+							<div class="HeroName">Lich</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь имеет базовое восстановление маны в 0,75</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/lina_hphover.png">
+
+							<div class="HeroName">Lina</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост силы увеличен с 2 до 2,2</li><li class="PatchNote">Скорость поворота увеличена с 0,5 до 0,6</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/lion_hphover.png">
+
+							<div class="HeroName">Lion</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/lion_finger_of_death_md.png">
+
+											<div class="AbilityName">Finger of Death</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Дополнительный урон за убийство уменьшен с 50 до 40</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/lone_druid_hphover.png">
+
+							<div class="HeroName">Lone Druid</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост силы увеличен с 2,4 до 2,7</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/lone_druid_true_form_md.png">
+
+											<div class="AbilityName">True Form</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Дополнительное здоровье увеличено с 300/600/900 до 300/700/1100</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/luna_hphover.png">
+
+							<div class="HeroName">Luna</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовый урон увеличен на 4</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/lycan_hphover.png">
+
+							<div class="HeroName">Lycan</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. С каждой волной крипов на одной из линий будут появляться два волка. Ими нельзя управлять, однако они считаются подконтрольными существами героя. У этих волков такая же скорость передвижения, как и у других крипов на линии.</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительное восстановление здоровья от Feral Impulse увеличено с 8 до 10</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/magnataur_hphover.png">
+
+							<div class="HeroName">Magnus</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая сила увеличена на 2</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/magnataur_shockwave_md.png">
+
+											<div class="AbilityName">Shockwave</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Дальность применения с Aghanim's Scepter увеличена с 1725 до 2000</li><li class="PatchNote">Скорость волны с Aghanim's Scepter увеличена с 1200 до 1500</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/mars_hphover.png">
+
+							<div class="HeroName">Mars</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Герой добавлен в режим Captains Mode</li><li class="PatchNote">Базовый урон уменьшен на 4</li><li class="PatchNote">Базовая броня уменьшена на 1</li><li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Применение способности Arena of Blood сбрасывает перезарядку God's Rebuke и уменьшает её до 1,4 секунды, пока арена не пропадёт.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/mars_arena_of_blood_md.png">
+
+											<div class="AbilityName">Arena of Blood</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Урон от копий изменён с 150/200/250 на 120/185/250</li><li class="PatchNote">Задержка перед применением увеличена с 0,1 до 0,2 секунды</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительный урон уменьшен с 35 до 30</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/medusa_hphover.png">
+
+							<div class="HeroName">Medusa</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост ловкости уменьшен с 3,9 до 3,6</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительная кража маны у Mystic Snake уменьшена с 30% до 25%</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/meepo_hphover.png">
+
+							<div class="HeroName">Meepo</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовый урон увеличен на 2</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 10 уровня: дополнительная сила увеличена с 7 до 10</li><li class="PatchNote">Талант 10 уровня: дополнительный урон увеличен с 10 до 15</li><li class="PatchNote">Талант 15 уровня: дополнительное уклонение увеличено с 15% до 20%</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/mirana_hphover.png">
+
+							<div class="HeroName">Mirana</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Задержка перед атакой увеличена с 0,3 до 0,35 секунды</li><li class="PatchNote">Базовая скорость атаки увеличена со 100 до 115</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/mirana_starfall_md.png">
+
+											<div class="AbilityName">Starstorm</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Интервал автоматического применения с Aghanim's Scepter уменьшен с 10 до 9 секунд</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/monkey_king_hphover.png">
+
+							<div class="HeroName">Monkey King</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Создаёт неподалёку солдата каждые 3,5 секунды, но только если герой не на дереве и не невидим. Солдат существует 12 секунд и может атаковать любую цель (но не атакует постройки, если владелец находится на расстоянии более 500).</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/morphling_hphover.png">
+
+							<div class="HeroName">Morphling</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Adaptive Strike (ловкость): базовый урон уменьшен со 100 до 70/80/90/100</li><li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Morph: в форме другого героя перезарядка способностей уменьшена на 35%, их расход маны — на 50%, а дальность их применения увеличена на 600.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/morphling_replicate_md.png">
+
+											<div class="AbilityName">Morph</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Способность больше не применяет на владельца развеивание</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/furion_hphover.png">
+
+							<div class="HeroName">Nature's Prophet</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовый урон уменьшен на 2</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/furion_force_of_nature_md.png">
+
+											<div class="AbilityName">Nature's Call</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Урон энтов уменьшен с 27/30/33/36 до 24/28/32/36</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/necrolyte_hphover.png">
+
+							<div class="HeroName">Necrophos</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/necrolyte_reapers_scythe_md.png">
+
+											<div class="AbilityName">Reaper's Scythe</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Дополнительное время возрождения уменьшено с 15/30/45 до 15/25/35 секунд</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/night_stalker_hphover.png">
+
+							<div class="HeroName">Night Stalker</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Void: способность применяется на всех врагов вокруг владельца в радиусе 900. Увеличивает время оглушения с 0,1 до 0,6 секунды и уменьшает перезарядку на 2 секунды.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/nyx_assassin_hphover.png">
+
+							<div class="HeroName">Nyx Assassin</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая сила уменьшена на 1</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/nyx_assassin_vendetta_md.png">
+
+											<div class="AbilityName">Vendetta</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Перезарядка изменена с 70/60/50 на 90/70/50 секунд</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительная скорость передвижения уменьшена с 30 до 25</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/ogre_magi_hphover.png">
+
+							<div class="HeroName">Ogre Magi</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/ogre_magi_multicast_md.png">
+
+											<div class="AbilityName">Multicast</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Шанс двойного срабатывания увеличен с 70% до 75%</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 25 уровня: дополнительный урон от Fireblast увеличен с 275 до 300</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/omniknight_hphover.png">
+
+							<div class="HeroName">Omniknight</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/omniknight_guardian_angel_md.png">
+
+											<div class="AbilityName">Guardian Angel</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь Aghanim's Scepter также увеличивает восстановление здоровья на 40 (также действует на постройки)</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/oracle_hphover.png">
+
+							<div class="HeroName">Oracle</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая задержка перед атакой увеличена с 1,4 до 1,7 секунды</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 20 уровня: дополнительная скорость передвижения уменьшена с 50 до 45</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/obsidian_destroyer_hphover.png">
+
+							<div class="HeroName">Outworld Devourer</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/obsidian_destroyer_equilibrium_md.png">
+
+											<div class="AbilityName">Equilibrium</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь способность пассивно даёт кражу маны в размере 11/18/25/32% от наносимого урона (не только от способностей). Применение увеличит это число втрое, а способности будут замедлять задетых врагов.</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/pangolier_hphover.png">
+
+							<div class="HeroName">Pangolier</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Shield Crash: добавляет к прыжку 2 атаки от способности Swashbuckle в четырёх направлениях.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/pangolier_lucky_shot_md.png">
+
+											<div class="AbilityName">Lucky Shot</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Способность больше не может наложить безмолвие. Теперь может наложить только бессилие.</li><li class="PatchNote">Теперь срабатывание уменьшает броню на 3/4/5/6</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/phantom_assassin_hphover.png">
+
+							<div class="HeroName">Phantom Assassin</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Blur: уменьшает перезарядку до 12 секунд. Способность развеивает отрицательные эффекты и применяется без задержки. Каждое убийство героя сбрасывает перезарядку способностей.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/phantom_lancer_hphover.png">
+
+							<div class="HeroName">Phantom Lancer</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост силы увеличен с 2 до 2,2</li><li class="PatchNote">Прирост ловкости увеличен с 3 до 3,2</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/phoenix_hphover.png">
+
+							<div class="HeroName">Phoenix</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая сила увеличена на 2</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/phoenix_supernova_md.png">
+
+											<div class="AbilityName">Supernova</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь снимает перезарядку со способностей сразу же, а не после возрождения</li><li class="PatchNote">Теперь Aghanim's Scepter также позволяет во время перерождения использовать способность Sun Ray и менять её направление.</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/puck_hphover.png">
+
+							<div class="HeroName">Puck</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост интеллекта увеличен с 3,1 до 3,5</li><li class="PatchNote">Прирост силы увеличен с 2,2 до 2,4</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/pudge_hphover.png">
+
+							<div class="HeroName">Pudge</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовый интеллект увеличен на 2</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительное замедление от Rot увеличено с 12% до 16%</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/pugna_hphover.png">
+
+							<div class="HeroName">Pugna</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь имеет базовое восстановление маны в 0,5</li><li class="PatchNote">Прирост ловкости увеличен с 1 до 1,3</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/pugna_nether_ward_md.png">
+
+											<div class="AbilityName">Nether Ward</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Поглощение маны увеличено с 0,25/0,5/0,75/1 до 0,3/0,6/0,9/1,2</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/razor_hphover.png">
+
+							<div class="HeroName">Razor</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/razor_eye_of_the_storm_md.png">
+
+											<div class="AbilityName">Eye of the Storm</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Aghanim's Scepter больше не уменьшает интервал разрядов</li><li class="PatchNote">Теперь Aghanim's Scepter позволяет способности атаковать сразу две цели (по-прежнему позволяет наносить урон постройкам)</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/riki_hphover.png">
+
+							<div class="HeroName">Riki</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовый урон увеличен на 3</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/rubick_hphover.png">
+
+							<div class="HeroName">Rubick</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Ловкость изменена с 19 + 2,1 до 23 + 2,5</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/shadow_demon_hphover.png">
+
+							<div class="HeroName">Shadow Demon</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост интеллекта увеличен с 3,1 до 3,3</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/nevermore_hphover.png">
+
+							<div class="HeroName">Shadow Fiend</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь имеет базовое восстановление маны в 0,3</li><li class="PatchNote">Прирост силы увеличен с 2,3 до 2,5</li><li class="PatchNote">Прирост ловкости увеличен с 3,3 до 3,5</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/shadow_shaman_hphover.png">
+
+							<div class="HeroName">Shadow Shaman</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/shadow_shaman_ether_shock_md.png">
+
+											<div class="AbilityName">Ether Shock</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Расход маны изменён с 95/105/135/160 на 100/120/140/160</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/silencer_hphover.png">
+
+							<div class="HeroName">Silencer</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая скорость атаки увеличена со 100 до 115</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/skywrath_mage_hphover.png">
+
+							<div class="HeroName">Skywrath Mage</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/skywrath_mage_ancient_seal_md.png">
+
+											<div class="AbilityName">Ancient Seal</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Дальность применения увеличена с 700 до 750</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/skywrath_mage_concussive_shot_md.png">
+
+											<div class="AbilityName">Concussive Shot</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Расход маны изменён с 95 на 80/85/90/95</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/slardar_hphover.png">
+
+							<div class="HeroName">Slardar</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Slithereen Crush: теперь способность создаёт пруд, который даёт те же бонусы, что и река. Герой получает +25 к восстановлению здоровья, +12 к броне и +40% к сопротивлению эффектам, когда находится в реке или пруду. Радиус пруда: 550. Длительность пруда: 25 секунд.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/slardar_sprint_md.png">
+
+											<div class="AbilityName">Guardian Sprint</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь способность пассивно ускоряет передвижение по реке на 5/20/35/50%, игнорируя ограничение на скорость передвижения, а не повышает скорость до 700 на 4 уровне.</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 25 уровня: «+1,25 сек. оглушения от Slithereen Crush» заменено на «-4,5 сек. перезарядки Slithereen Crush»</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/slark_hphover.png">
+
+							<div class="HeroName">Slark</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовая скорость атаки увеличена со 100 до 120</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/slark_shadow_dance_md.png">
+
+											<div class="AbilityName">Shadow Dance</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Здоровье в секунду изменено с 3/5/7% на 5/6/7%</li><li class="PatchNote">Радиус со скипетром увеличен с 325 до 425</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/spectre_hphover.png">
+
+							<div class="HeroName">Spectre</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Дарует новую способность: Shadow Step. Позволяет призвать спектральную копию к одному выбранному герою. Перезарядка: 70 секунд. Расход маны: 180.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/spirit_breaker_hphover.png">
+
+							<div class="HeroName">Spirit Breaker</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовое восстановление здоровья увеличено с 0,75 до 1,25</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/spirit_breaker_bulldoze_md.png">
+
+											<div class="AbilityName">Bulldoze</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Дополнительное сопротивление эффектам увеличено с 30/40/50/60% до 34/46/58/70%</li><li class="PatchNote">Дополнительная скорость передвижения увеличена с 12/18/24/30% до 14/20/26/32%</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/spirit_breaker_greater_bash_md.png">
+
+											<div class="AbilityName">Greater Bash</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Длительность оглушения изменена с 1,2/1,4/1,6/1,8 на 0,9/1,2/1,5/1,8 секунды</li><li class="PatchNote">Скорость в виде урона изменена с 8/16/24/32% на 14/20/26/32%</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/spirit_breaker_charge_of_darkness_md.png">
+
+											<div class="AbilityName">Charge of Darkness</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Расход маны уменьшен со 100 до 70/80/90/100</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/spirit_breaker_nether_strike_md.png">
+
+											<div class="AbilityName">Nether Strike</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Дальность со скипетром увеличена с 850 до 950</li><li class="PatchNote">Радиус со скипетром увеличен с 250 до 350</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/techies_hphover.png">
+
+							<div class="HeroName">Techies</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь имеет базовое восстановление маны в 1</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/templar_assassin_hphover.png">
+
+							<div class="HeroName">Templar Assassin</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Дарует новую способность: Psionic Projection. После 2 секунд подготовки телепортирует героя к любой ловушке от Psionic Trap, приводя её в действие по прибытии. Не раскрывает невидимость от способности Meld. Перезарядка: 30 секунд. Расход маны: 100.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/terrorblade_hphover.png">
+
+							<div class="HeroName">Terrorblade</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Metamorphosis: применение выпускает круговую волну, заставляющую задетых врагов бежать в страхе 3 секунды. Волна появляется спустя 0,6 секунды после применения и движется со скоростью 1000. Не действует на невосприимчивых к магии существ. Имеет глобальный звуковой эффект.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/terrorblade_reflection_md.png">
+
+											<div class="AbilityName">Reflection</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Способность больше не действует на иллюзии</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/tidehunter_hphover.png">
+
+							<div class="HeroName">Tidehunter</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/tidehunter_gush_md.png">
+
+											<div class="AbilityName">Gush</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Радиус со скипетром увеличен с 240 до 260</li><li class="PatchNote">Дальность со скипетром увеличена с 1800 до 2200</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/shredder_hphover.png">
+
+							<div class="HeroName">Timbersaw</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост силы увеличен с 2,8 до 3,2</li><li class="PatchNote">Прирост интеллекта увеличен с 2,4 до 2,7</li><li class="PatchNote">Базовая броня увеличена на 1</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 10 уровня: «+6% к урону от способностей» заменено на «+2,5 к восстановлению маны»</li><li class="PatchNote">Талант 10 уровня: «+25% к получаемому опыту» заменено на «+225 к здоровью»</li><li class="PatchNote">Талант 15 уровня: число дополнительных эффектов от Reactive Armor увеличено с 5 до 8</li><li class="PatchNote">Талант 15 уровня: «+100 к урону» заменено на «+10% к урону от способностей»</li><li class="PatchNote">Талант 20 уровня: дополнительная сила увеличена с 15 до 20</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/tinker_hphover.png">
+
+							<div class="HeroName">Tinker</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь имеет базовое восстановление маны в 0,25</li><li class="PatchNote">Прирост интеллекта увеличен с 2,5 до 3,3</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 10 уровня: дополнительный урон от способностей увеличен с 6% до 8%</li><li class="PatchNote">Талант 10 уровня: дополнительная дальность способностей увеличена с 75 до 100</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/tiny_hphover.png">
+
+							<div class="HeroName">Tiny</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Прирост интеллекта увеличен с 1,6 до 2,2</li><li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Дарует новую прерываемую способность: Tree Volley. Каждые 0,4 секунды вырывает из земли случайное дерево в радиусе 525 и швыряет его в указанную область, нанося противникам 120% урона от атаки героя. Область действия: 400. Дальность применения: 1300. Максимальная длительность: 2,4 секунды. Перезарядка: 12 секунд. Расход маны: 150.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/tiny_craggy_exterior_md.png">
+
+											<div class="AbilityName">Tree Grab</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Перезарядка уменьшена с 27/22/17/12 до 25/20/15/10 секунд</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/tiny_grow_md.png">
+
+											<div class="AbilityName">Grow</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Дополнительная броня увеличена с 7/16/25 до 10/18/26</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/treant_hphover.png">
+
+							<div class="HeroName">Treant Protector</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь имеет базовое восстановление маны в 0,5</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/treant_natures_guise_md.png">
+
+											<div class="AbilityName">Nature's Guise</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Сильные изменения. Теперь это ненаправленная способность, применяемая с задержкой 0,6 секунды. Владелец мгновенно становится невидимым, и эффект не прерывается при получении урона. Начинает перезаряжаться при окончании невидимости. Перезарядка: 10/8/6/4 секунды. Расход маны: 30/40/50/60.</li><li class="PatchNote">Дополнительная скорость передвижения изменена с 14/18/22/26% на 20/22/24/26%</li><li class="PatchNote">Суммарный урон изменён с 30/90/150/210 на 60/110/160/210</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/troll_warlord_hphover.png">
+
+							<div class="HeroName">Troll Warlord</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Добавлено улучшение от Aghanim's Scepter. Battle Trance: уменьшает перезарядку до 35 секунд и позволяет применять способность на других героев. Длительность на противниках вдвое меньше. Дальность применения: 525.</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/tusk_hphover.png">
+
+							<div class="HeroName">Tusk</div>
+
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 20 уровня «+300 к скорости снежного шара от Snowball» заменено на «-6 сек. перезарядки Ice Shards»</li><li class="PatchNote">Талант 25 уровня «-6 сек. перезарядки Ice Shards» заменено на «-7 сек. перезарядки Snowball»</li><li class="PatchNote">Талант 25 уровня: шанс срабатывания Walrus Punch при атаке увеличен с 12% до 15% (теперь использует псевдослучайное распределение)</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/abyssal_underlord_hphover.png">
+
+							<div class="HeroName">Underlord</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/abyssal_underlord_pit_of_malice_md.png">
+
+											<div class="AbilityName">Pit of Malice</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Радиус увеличен с 375 до 390</li><li class="PatchNote">Перезарядка уменьшена с 32/28/24/20 до 30/26/22/18 секунд</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/undying_hphover.png">
+
+							<div class="HeroName">Undying</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/undying_soul_rip_md.png">
+
+											<div class="AbilityName">Soul Rip</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Задержка перед применением уменьшена с 0,45 до 0,35 секунды</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/undying_tombstone_md.png">
+
+											<div class="AbilityName">Tombstone</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь для убийства зомби иллюзиям требуются две атаки вместо одной, как и крипам</li><li class="PatchNote">Теперь крипы и иллюзии наносят надгробию не 1/2, а 1/4 урона от атаки героя</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/vengefulspirit_hphover.png">
+
+							<div class="HeroName">Vengeful Spirit</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/vengefulspirit_nether_swap_md.png">
+
+											<div class="AbilityName">Nether Swap</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь способность имеет перезарядку в 0,25 секунды, чтобы её нельзя было случайно применить дважды</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/venomancer_hphover.png">
+
+							<div class="HeroName">Venomancer</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовый интеллект увеличен на 2</li><li class="PatchNote">Базовая скорость атаки увеличена со 100 до 115</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 15 уровня: дополнительное замедление от Poison Sting увеличено с 8% до 12%</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/visage_hphover.png">
+
+							<div class="HeroName">Visage</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Базовое сопротивление магии увеличено с 10% до 25%</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/visage_summon_familiars_md.png">
+
+											<div class="AbilityName">Summon Familiars</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Здоровье гагрульи изменено с 400/550/700 на 500/600/700</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/warlock_hphover.png">
+
+							<div class="HeroName">Warlock</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/warlock_rain_of_chaos_md.png">
+
+											<div class="AbilityName">Chaotic Offering</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Теперь способность с Aghanim's Scepter призывает второго голема через 0,4 секунды после первого, а не обоих одновременно</li>												</ul>
+											
+										</div>
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/warlock_fatal_bonds_md.png">
+
+											<div class="AbilityName">Fatal Bonds</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Число связываемых врагов изменено с 3/4/5/6 на 6</li><li class="PatchNote">Распределяемый урон изменён с 25% на 13/17/21/25%</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 25 уровня: дополнительная броня големов увеличена с 20 до 25</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/weaver_hphover.png">
+
+							<div class="HeroName">Weaver</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь имеет базовое восстановление маны в 0,4</li><li class="PatchNote">Базовая скорость атаки увеличена со 100 до 120</li>								</ul>
+							
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/windrunner_hphover.png">
+
+							<div class="HeroName">Windranger</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Переработано улучшение от Aghanim's Scepter. Windrun: перезарядка заменяется 2 зарядами. Увеличивает скорость передвижения на 45%.</li>								</ul>
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/windrunner_focusfire_md.png">
+
+											<div class="AbilityName">Focus Fire</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Перезарядка уменьшена с 70 до 70/50/30 секунд</li>												</ul>
+											
+										</div>
+																	</div>
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 10 уровня «+30% к замедлению от Windrun» заменено на «-2 сек. перезарядки Shackleshot»</li><li class="PatchNote">Талант 25 уровня: «+35% к шансу оглушения от Focus Fire» заменено на «-20% снижения урона у Focus Fire»</li>									</ul>
+
+								</div>
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/winter_wyvern_hphover.png">
+
+							<div class="HeroName">Winter Wyvern</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/winter_wyvern_arctic_burn_md.png">
+
+											<div class="AbilityName">Arctic Burn</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Расход маны в секунду со скипетром уменьшен с 40 до 30</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/witch_doctor_hphover.png">
+
+							<div class="HeroName">Witch Doctor</div>
+
+							
+															<div class="HeroAbilities">
+																													<div class="HeroAbilityNotes">
+											<img class="AbilityImage" src="./Обновление 7.22_files/witch_doctor_death_ward_md.png">
+
+											<div class="AbilityName">Death Ward</div>
+
+																							<ul class="PatchNotesList">
+													<li class="PatchNote">Урон увеличен с 75/125/175 до 85/135/185</li>												</ul>
+											
+										</div>
+																	</div>
+							
+							
+						</div>
+											<div class="HeroNotes">
+													
+							<img class="HeroImage" src="./Обновление 7.22_files/zuus_hphover.png">
+
+							<div class="HeroName">Zeus</div>
+
+															<ul class="PatchNotesList HeroNotesList">
+									<li class="PatchNote">Теперь имеет базовое восстановление маны в 0,25</li><li class="PatchNote">Задержка перед атакой уменьшена с 0,633 до 0,45 секунды</li>								</ul>
+							
+							
+															<div class="TalentNotes">
+									<div class="TalentsLabel">Talents</div>
+
+									<ul class="PatchNotesList">
+										<li class="PatchNote">Талант 10 уровня: «+6 к броне» заменено на «+3 к восстановлению маны»</li>									</ul>
+
+								</div>
+							
+						</div>
+					
+				</div>
+			
+		</div>
+
+	
+
+
+</body></html>

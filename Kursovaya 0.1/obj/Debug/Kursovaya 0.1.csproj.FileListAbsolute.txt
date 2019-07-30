@@ -1,0 +1,16 @@
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\bin\Debug\Dota2.mdb
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\bin\Debug\Kursovaya 0.1.exe.config
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\bin\Debug\Kursovaya 0.1.exe
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\bin\Debug\Kursovaya 0.1.pdb
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya_0._1.Change_patch.resources
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya_0._1.Form1.resources
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya_0._1.learn.resources
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya_0._1.MainMenu.resources
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya_0._1.Patch.resources
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya_0._1.Prevue.resources
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya_0._1.Properties.Resources.resources
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya 0.1.csproj.GenerateResource.cache
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya 0.1.csproj.CoreCompileInputs.cache
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya 0.1.exe
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya 0.1.pdb
+C:\Users\mikut\source\repos\Kursovaya 0.1\Kursovaya 0.1\obj\Debug\Kursovaya 0.1.csprojAssemblyReference.cache
